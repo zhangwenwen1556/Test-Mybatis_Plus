@@ -64,6 +64,12 @@ public class User extends Model<User> {
     @TableField("create_at")
     private Date createAt;
 
+    /**
+     * 被谁创建的
+     */
+    @TableField("create_user_id")
+    private Date createUserId;
+
     @Override
     protected Serializable pkVal() {
         return this.id;

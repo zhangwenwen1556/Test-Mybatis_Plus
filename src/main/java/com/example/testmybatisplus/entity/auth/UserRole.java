@@ -3,7 +3,9 @@ package com.example.testmybatisplus.entity.auth;
 import com.baomidou.mybatisplus.activerecord.Model;
 import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.annotations.TableId;
+import com.baomidou.mybatisplus.annotations.TableName;
 import com.baomidou.mybatisplus.enums.IdType;
+import lombok.Data;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -16,6 +18,8 @@ import java.util.Date;
  * @since 1.0
  * @desc 用户权限
  */
+@Data
+@TableName("user_role")
 public class UserRole extends Model<UserRole> {
 
     @TableId(value = "id", type = IdType.AUTO)
@@ -33,6 +37,7 @@ public class UserRole extends Model<UserRole> {
     /**
      * 状态
      */
+    @TableField("status")
     private Integer status;
     /**
      * 创建人
