@@ -11,6 +11,11 @@ package com.example.testmybatisplus.constants;
 public class Constants {
 
     /**
+     * 开发人员 - 张文文
+     */
+    public static final String DEVELOPER_NAME_ZHANGWENWEN = "张文文";
+
+    /**
      * 系统状态 - 正常
      */
     public static final Integer STATUS_VALID = 1;
@@ -54,4 +59,15 @@ public class Constants {
      */
     public static final String MSG_TYPE_LINK = "link";
     public static final String MSG_TYPE_LINK_NAME = "链接";
+
+    /**
+     * 是否显示封面 - 否
+     */
+    public static final Integer SHOW_COVER_PIC_NO = 0;
+    public static final String SHOW_COVER_PIC_NO_NAME = "否";
+    /**
+     * 是否显示封面 - 是
+     */
+    public static final Integer SHOW_COVER_PIC_YES = 1;
+    public static final String SHOW_COVER_PIC_YES_NAME = "是";
 }

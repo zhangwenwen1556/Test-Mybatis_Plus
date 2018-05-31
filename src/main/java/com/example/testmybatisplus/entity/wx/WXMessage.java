@@ -183,13 +183,16 @@ public class WXMessage extends Model<WXMessage> {
 
     /**
      * 系统状态
+     * {@link Constants#STATUS_INVALID}
+     * {@link Constants#STATUS_VALID}
      */
     @TableField("status")
     private Integer status;
 
     /**
-     *
+     * 消息状态
      */
+    @TableField("message_status")
     private Integer messageStatus;
 
     @Override

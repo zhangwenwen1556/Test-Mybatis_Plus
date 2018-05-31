@@ -5,10 +5,14 @@ import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableName;
 import com.baomidou.mybatisplus.enums.IdType;
+import com.example.testmybatisplus.constants.Constants;
 import lombok.Data;
+import org.apache.tomcat.util.bcel.Const;
 
 import java.io.Serializable;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * @author wenwen.zhang
@@ -21,6 +25,15 @@ import java.util.Date;
 @Data
 @TableName("wx_material")
 public class WXMaterial extends Model<WXMaterial> {
+
+    /**
+     * 是否显示封面，数字中文对照
+     */
+    public final static Map<Integer, String> SHOW_COVER_PIC = new HashMap<Integer, String>(){{
+        put(Constants.SHOW_COVER_PIC_NO, Constants.SHOW_COVER_PIC_NO_NAME);
+        put(Constants.SHOW_COVER_PIC_YES, Constants.SHOW_COVER_PIC_YES_NAME);
+    }};
+
 
     /**
      * 系统ID
@@ -54,6 +67,8 @@ public class WXMaterial extends Model<WXMaterial> {
 
     /**
      * 是否显示封面，0为false，即不显示，1为true，即显示
+     * {@link Constants#SHOW_COVER_PIC_NO}
+     * {@link Constants#SHOW_COVER_PIC_YES}
      */
     @TableField("show_cover_pic")
     private String showCoverPic;
@@ -84,6 +99,8 @@ public class WXMaterial extends Model<WXMaterial> {
 
     /**
      * 系统状态
+     * {@link Constants#STATUS_INVALID}
+     * {@link Constants#STATUS_VALID}
      */
     @TableField("status")
     private Integer status;
